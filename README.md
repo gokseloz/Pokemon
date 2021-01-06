@@ -44,7 +44,7 @@
 
 ![2](https://user-images.githubusercontent.com/72968539/103764455-cab30100-501b-11eb-96f2-18d67fb65d69.png)
 <ul>
-<li>Mobile version</li>
+<li>Mobile version separated banner and pokemon page </li>
 </ul>
 
 ![3](https://user-images.githubusercontent.com/72968539/103764503-de5e6780-501b-11eb-886d-4416811b9c66.png)
