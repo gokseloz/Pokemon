@@ -1,0 +1,60 @@
+@keyframes bannerTitle {
+    0% {
+        left: -200%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes button_paragraph {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes anim-return-button {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pokeImg-anim {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    20% {
+        transform: rotateZ(15deg);
+    }
+
+    40% {
+        transform: rotateZ(-15deg);
+    }
+
+    60% {
+        transform: rotateZ(5deg);
+    }
+
+    80% {
+        transform: rotateZ(-5deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
