@@ -37,17 +37,14 @@
 </ul>
 
 ![1](https://user-images.githubusercontent.com/72968539/103764410-b4a54080-501b-11eb-9aa6-d1ebee80b9cc.png)
-
 <ul>
 <li>Desktop version pokemon page</li>
 </ul>
 
 ![2](https://user-images.githubusercontent.com/72968539/103764455-cab30100-501b-11eb-96f2-18d67fb65d69.png)
-
 <ul>
 <li>Mobile version</li>
 </ul>
 
 ![3](https://user-images.githubusercontent.com/72968539/103764503-de5e6780-501b-11eb-886d-4416811b9c66.png)
-
 
