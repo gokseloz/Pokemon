@@ -36,7 +36,8 @@
 <li>Desktop version banner page</li>
 </ul>
 
-![1](https://user-images.githubusercontent.com/72968539/103764410-b4a54080-501b-11eb-9aa6-d1ebee80b9cc.png)
+![1](https://user-images.githubusercontent.com/72968539/103764952-b02d5780-501c-11eb-9d89-a9b1f23162c2.png)
+
 <ul>
 <li>Desktop version pokemon page</li>
 </ul>
