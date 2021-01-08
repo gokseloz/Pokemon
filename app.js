@@ -21,21 +21,21 @@ $(window).on("load", function () {
         $(this).siblings(".poke-name").css("opacity", "0")
     })
 
-    $(".poke-img").on("click", function () {            //
-        $(".poke-audio").trigger("pause")               //
-        $(this).siblings(".poke-audio").trigger("play") //
-                                                        //
-        $(".poke-img").css({                            //
-            "filter": "blur(0px)",                      //
-            "animation": "none"                         //
-        })                                              //  This block of code is for touch-screens when clicking 
-        $(this).css({                                   //
-            "filter": "blur(5px)",                      //
-            "animation": "anim 1s"                      //////
-        })                                                  //
-                                                            //
-        $(".poke-name").css("opacity", "0")                 //
-        $(this).siblings(".poke-name").css("opacity", "1")  //
+    $(".poke-img").on("click", function () {            
+        $(".poke-audio").trigger("pause")               
+        $(this).siblings(".poke-audio").trigger("play") 
+                                                        
+        $(".poke-img").css({                            
+            "filter": "blur(0px)",                      
+            "animation": "none"                         
+        })                                              
+        $(this).css({                                   
+            "filter": "blur(5px)",                      
+            "animation": "anim 1s"                      
+        })                                                  
+                                                            
+        $(".poke-name").css("opacity", "0")                 
+        $(this).siblings(".poke-name").css("opacity", "1")  
     })
 
     // $(".poke-img").each(function () {            // This is the alternative code of previous block of code
