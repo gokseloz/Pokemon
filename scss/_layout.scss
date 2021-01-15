@@ -1,0 +1,187 @@
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    &-title {
+        position: relative;
+        color: $dark-red;
+        font-size: 120px;
+        border-top: 5px solid $dark-red;
+        border-bottom: 5px solid $dark-red;
+        font-family: 'Ubuntu', sans-serif;
+
+        @media (max-width:750px) {
+            font-size: 90px;
+        }
+
+        @media (max-width:550px) {
+            font-size: 60px;
+            border-top: 3px solid $dark-red;
+            border-bottom: 3px solid $dark-red;
+        }
+
+        @media (max-width:350px) {
+            font-size: 40px;
+            border-top: 2px solid $dark-red;
+            border-bottom: 2px solid $dark-red;
+        }
+
+        //that makes an effect on the title of the banner when page loads
+        &:before {
+            content: "";
+            position: absolute;
+            top: -15%;
+            left: -200%;
+            width: 300%;
+            height: 130%;
+            background: linear-gradient(to right, transparent, #000, #000);
+            animation: bannerTitle 4s forwards;
+        }
+    }
+
+    &-paragraph {
+        font-size: 18px;
+        color: #fff;
+        font-family: 'Dosis', sans-serif;
+        margin-top: 35px;
+        opacity: 0;
+        padding: 5px 10px;
+        animation: button_paragraph 1s 2s linear forwards;
+        background: linear-gradient(to right, #000, $verylight-red, #000);
+
+        @media (max-width:550px) {
+            font-size: 14px;
+        }
+
+        @media (max-width:350px) {
+            font-size: 12px;
+        }
+    }
+
+    //two buttons-wrapper in the banner page
+    &-buttons {
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        animation: button_paragraph 1s 2s linear forwards;
+
+        .button-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            //gap between 2 buttons. using margin-left is not good because first element should not have margin
+            &+.button-block {
+                margin-left: 20px;
+            }
+        }
+
+        //evolution button to add pikachu gif
+        .evo-btn {
+            &:hover+.pikachu {
+                opacity: 1;
+            }
+        }
+
+        //listen to them button to add squirtle gif
+        .listen-btn {
+            &:hover+.squirtle {
+                opacity: 1;
+            }
+        }
+
+        //general class name for the gifs below to prevent repetitive code
+        .gif {
+
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin-top: 20px;
+            opacity: 0;
+
+            @media (max-width:750px) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        //gifs
+        .pikachu {
+            background: url(../images/pika.gif) no-repeat center center / cover;
+        }
+
+        .squirtle {
+            background: url(../images/squirtle.gif) no-repeat center center/ cover;
+        }
+    }
+}
+
+.pokemonsPage {
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    animation: x-btn-anim 2s;
+    display: none;
+
+    //times symbol on the top in order to return to banner page 
+    .x-btn-wrapper {
+        position: absolute;
+        font-size: 36px;
+        color: #fff;
+        font-weight: bold;
+        top: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: x-btn-anim 1s;
+
+         
+        .x-btn {
+            position: relative;
+            display: block;
+            color: #fff;
+            transition: all 1s;
+            transform: rotateZ(0deg);
+
+            &:hover {
+                transform: rotateZ(720deg);
+            }
+        }
+    }
+
+    //pokemon page divided two columnS
+    .column {
+        height: 100vh;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    //info for users regarding how to play and stop the audio
+    .pokemons-page-info {
+        color: #fff;
+        font-size: 12px;
+        opacity: .5;
+        position: absolute;
+        top: 1%;
+        font-family: 'Dosis', sans-serif;
+
+    }
+}

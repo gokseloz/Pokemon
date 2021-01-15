@@ -13,7 +13,7 @@
     opacity: 1;
     visibility: visible; } }
 
-@keyframes anim-return-button {
+@keyframes x-btn-anim {
   0% {
     opacity: 0; }
   100% {
@@ -43,6 +43,92 @@
   height: 100vh;
   background-color: #000; }
 
+.banner-button {
+  outline: none;
+  border: none;
+  color: #fff;
+  margin-top: 35px;
+  padding: 10px 30px;
+  background: linear-gradient(to right, #440402, #c0120c);
+  border-radius: 40px;
+  font-size: 24px;
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: 2px;
+  transform: perspective(500px) rotateY(-15deg);
+  text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s; }
+  .banner-button:hover {
+    transform: rotateY(15deg);
+    text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #c0120c, #440402); }
+  .banner-button:hover::before {
+    left: 100%; }
+  .banner-button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: -100%;
+    transform: skewX(-30deg);
+    background: linear-gradient(to right, transparent, #fff, transparent);
+    transition: left .5s; }
+  @media (max-width: 750px) {
+    .banner-button {
+      font-size: 20px;
+      padding: 8px 25px; } }
+  @media (max-width: 550px) {
+    .banner-button {
+      font-size: 14px;
+      margin-top: 40px;
+      padding: 8px 20px; } }
+  @media (max-width: 350px) {
+    .banner-button {
+      font-size: 12px;
+      padding: 6px 15px; } }
+
+.pokemon-content {
+  width: 235px;
+  height: 180px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; }
+  @media (max-width: 768px) {
+    .pokemon-content {
+      width: 150px;
+      height: 150px; } }
+  .pokemon-content .poke-img {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    transition: all .5s; }
+  .pokemon-content .poke-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    opacity: 0;
+    transition: all .5s;
+    text-transform: uppercase;
+    user-select: none;
+    pointer-events: none;
+    font-family: 'Caveat', cursive; }
+    @media (max-width: 880px) {
+      .pokemon-content .poke-name {
+        font-size: 22px; } }
+  .pokemon-content .poke-audio {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden; }
+
 .banner {
   position: absolute;
   top: 50%;
@@ -55,10 +141,10 @@
   overflow: hidden; }
   .banner-title {
     position: relative;
-    color: #91130f;
+    color: #440402;
     font-size: 120px;
-    border-top: 5px solid #91130f;
-    border-bottom: 5px solid #91130f;
+    border-top: 5px solid #440402;
+    border-bottom: 5px solid #440402;
     font-family: 'Ubuntu', sans-serif; }
     @media (max-width: 750px) {
       .banner-title {
@@ -66,13 +152,13 @@
     @media (max-width: 550px) {
       .banner-title {
         font-size: 60px;
-        border-top: 3px solid #91130f;
-        border-bottom: 3px solid #91130f; } }
+        border-top: 3px solid #440402;
+        border-bottom: 3px solid #440402; } }
     @media (max-width: 350px) {
       .banner-title {
         font-size: 40px;
-        border-top: 2px solid #91130f;
-        border-bottom: 2px solid #91130f; } }
+        border-top: 2px solid #440402;
+        border-bottom: 2px solid #440402; } }
     .banner-title:before {
       content: "";
       position: absolute;
@@ -109,52 +195,6 @@
       align-items: center; }
       .banner-buttons .button-block + .button-block {
         margin-left: 20px; }
-    .banner-buttons .banner-button {
-      outline: none;
-      border: none;
-      color: #fff;
-      margin-top: 35px;
-      padding: 10px 30px;
-      background: linear-gradient(to right, #440402, #c0120c);
-      border-radius: 40px;
-      font-size: 24px;
-      font-family: 'Dosis', sans-serif;
-      letter-spacing: 2px;
-      transform: perspective(500px) rotateY(-15deg);
-      text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.5);
-      cursor: pointer;
-      overflow: hidden;
-      transition: all 0.5s; }
-      .banner-buttons .banner-button:hover {
-        transform: rotateY(15deg);
-        text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.5);
-        background: linear-gradient(to right, #c0120c, #440402); }
-      .banner-buttons .banner-button:hover::before {
-        left: 100%; }
-      .banner-buttons .banner-button::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-        top: 0;
-        left: -100%;
-        transform: skewX(-30deg);
-        background: linear-gradient(to right, transparent, #fff, transparent);
-        transition: left .5s; }
-      @media (max-width: 750px) {
-        .banner-buttons .banner-button {
-          font-size: 20px;
-          padding: 8px 25px; } }
-      @media (max-width: 550px) {
-        .banner-buttons .banner-button {
-          font-size: 14px;
-          margin-top: 40px;
-          padding: 8px 20px; } }
-      @media (max-width: 350px) {
-        .banner-buttons .banner-button {
-          font-size: 12px;
-          padding: 6px 15px; } }
     .banner-buttons .evo-btn:hover + .pikachu {
       opacity: 1; }
     .banner-buttons .listen-btn:hover + .squirtle {
@@ -176,7 +216,6 @@
 
 .pokemonsPage {
   width: 100%;
-  height: 100%;
   background-color: #000;
   display: flex;
   flex-direction: row;
@@ -184,22 +223,26 @@
   align-items: center;
   box-sizing: border-box;
   overflow: hidden;
-  animation: anim-return-button 2s;
+  animation: x-btn-anim 2s;
   display: none; }
-  .pokemonsPage .return-banner {
+  .pokemonsPage .x-btn-wrapper {
     position: absolute;
-    top: 5%;
+    font-size: 36px;
+    color: #fff;
+    font-weight: bold;
+    top: 2%;
     left: 50%;
     transform: translateX(-50%);
-    animation: anim-return-button 1s; }
-    .pokemonsPage .return-banner i {
-      font-size: 24px;
+    animation: x-btn-anim 1s; }
+    .pokemonsPage .x-btn-wrapper .x-btn {
+      position: relative;
+      display: block;
       color: #fff;
-      transition: transform .5s; }
-      .pokemonsPage .return-banner i:hover {
-        transform: scale(1.5); }
-  .pokemonsPage .row {
-    width: 100%;
+      transition: all 1s;
+      transform: rotateZ(0deg); }
+      .pokemonsPage .x-btn-wrapper .x-btn:hover {
+        transform: rotateZ(720deg); }
+  .pokemonsPage .column {
     height: 100vh;
     padding: 10px;
     box-sizing: border-box;
@@ -209,67 +252,6 @@
     flex-wrap: wrap;
     overflow-y: auto;
     overflow-x: hidden; }
-    @media (max-width: 520px) {
-      .pokemonsPage .row {
-        height: 100%; } }
-    .pokemonsPage .row .pokemon-content {
-      width: 235px;
-      height: 180px;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box; }
-      @media (max-width: 1450px) {
-        .pokemonsPage .row .pokemon-content {
-          width: 180px;
-          height: 150px; } }
-      @media (max-width: 1120px) {
-        .pokemonsPage .row .pokemon-content {
-          width: 140px;
-          height: 120px; } }
-      @media (max-width: 880px) {
-        .pokemonsPage .row .pokemon-content {
-          width: 120px;
-          height: 100px; } }
-      @media (max-width: 770px) {
-        .pokemonsPage .row .pokemon-content {
-          width: 100px;
-          height: 100px; } }
-      @media (max-width: 640px) {
-        .pokemonsPage .row .pokemon-content {
-          width: 120px;
-          height: 120px; } }
-      @media (max-width: 320px) {
-        .pokemonsPage .row .pokemon-content {
-          width: 120px;
-          height: 120px; } }
-      .pokemonsPage .row .pokemon-content .poke-img {
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-        transition: all .5s; }
-      .pokemonsPage .row .pokemon-content .poke-name {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        font-size: 24px;
-        opacity: 0;
-        transition: all .5s;
-        text-transform: uppercase;
-        user-select: none;
-        pointer-events: none;
-        font-family: 'Caveat', cursive; }
-        @media (max-width: 880px) {
-          .pokemonsPage .row .pokemon-content .poke-name {
-            font-size: 22px; } }
-      .pokemonsPage .row .pokemon-content .poke-audio {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        opacity: 0;
-        visibility: hidden; }
   .pokemonsPage .pokemons-page-info {
     color: #fff;
     font-size: 12px;

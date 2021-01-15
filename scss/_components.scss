@@ -1,0 +1,108 @@
+//general class name for 2 buttons (see evolution & listen to them) to prevent repetitive code
+.banner-button {            
+    outline: none;
+    border: none;
+    color: #fff;
+    margin-top: 35px;
+    padding: 10px 30px;
+    background: linear-gradient(to right, $dark-red, $verylight-red);
+    border-radius: 40px;
+    font-size: 24px;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 2px;
+    transform: perspective(500px) rotateY(-15deg);
+    text-shadow: 6px 3px 2px rgba(#000, .5);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s;
+    
+
+    &:hover {
+        transform: rotateY(15deg);
+        text-shadow: -6px 3px 2px rgba(#000, .5);
+        background: linear-gradient(to right, $verylight-red, $dark-red);
+    }
+
+    //"before" swipes from left to right
+    &:hover::before {       
+        left: 100%;                         
+    }                                         
+                                              
+    &::before {                               
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        top: 0;
+        left: -100%;
+        transform: skewX(-30deg);
+        background: linear-gradient(to right, transparent, #fff, transparent);
+        transition: left .5s;
+    }
+
+    @media (max-width:750px) {
+        font-size: 20px;
+        padding: 8px 25px;
+    }
+
+    @media (max-width:550px) {
+        font-size: 14px;
+        margin-top: 40px;
+        padding: 8px 20px;
+    }
+
+    @media (max-width:350px) {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+}
+
+//wrapper for each pokemon's img, name and audio
+.pokemon-content {
+    width: 235px;
+    height: 180px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    @media (max-width:768px) {
+        width: 150px;
+        height: 150px;
+    }
+
+    .poke-img {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        transition: all .5s;
+    }
+
+    .poke-name {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 24px;
+        opacity: 0;
+        transition: all .5s;
+        text-transform: uppercase;
+        user-select: none;
+        pointer-events: none;
+        font-family: 'Caveat', cursive;
+
+        @media (max-width:880px) {
+            font-size: 22px;
+        }
+    }
+
+    .poke-audio {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
