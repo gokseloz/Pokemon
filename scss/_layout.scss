@@ -146,17 +146,24 @@
         left: 50%;
         transform: translateX(-50%);
         animation: x-btn-anim 1s;
+        perspective: 250px;
 
          
         .x-btn {
+            border: none;
+            outline: none;
+            background: none;
             position: relative;
+            font-size: 32px;
             display: block;
             color: #fff;
             transition: all 1s;
-            transform: rotateZ(0deg);
+            transform: translateZ(0px) rotateZ(0deg);
+            
 
             &:hover {
-                transform: rotateZ(720deg);
+                transform:translateZ(50px) rotateZ(360deg);
+
             }
         }
     }

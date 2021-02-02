@@ -1,0 +1,20 @@
+{
+  "name": "Pokemon",
+  "version": "1.0.0",
+  "description": "<ul>\r <li>Created this project to get to know some pokemons, their names, evolutions and sounds ) </li>\r </ul>",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass -o css scss/main.scss -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gokseloz/Pokemon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gokseloz/Pokemon/issues"
+  },
+  "homepage": "https://github.com/gokseloz/Pokemon#readme"
+}

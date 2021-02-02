@@ -6,18 +6,17 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
-   <link rel="shortcut" href="#">
-   <link
-      href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700|Oswald:300,400,500,600,700|Ubuntu:300,300i,400,400i,500,500i,700"
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dosis&family=Ubuntu:wght@700&display=swap"
       rel="stylesheet">
+   <link rel="icon" type="image/png" href="images/pokeball.png">
    <link rel="stylesheet" href="css/main.css">
    <title>Pokemon</title>
 </head>
 
 <body>
-   <div class="container">
-      <div class="banner">
+   <main class="container">
+      <section class="banner">
          <h1 class="banner-title">POKEMONS</h1>
          <p class="banner-paragraph">Let's get to know some of them</p>
          <div class="banner-buttons">
@@ -30,108 +29,109 @@
                <div class="gif squirtle"></div>
             </div>
          </div>
+      </section>
 
-      </div>
-      <class class="pokemonsPage">
-         <div class="x-btn-wrapper"><a href="#" class="x-btn">&times;</a></div>
-         <div class="column">
+      <section class="pokemonsPage">
+         <div class="x-btn-wrapper"><button href="#" class="x-btn" aria-label="back to banner page">&times;</button>
+         </div>
+         <section class="column">
             <div class="pokemon-content">
                <div class="poke-img poke-img-1"></div>
-               <p class="poke-name">Bulbasaur</p>
-               <audio class="poke-audio" controls="true" src="audios/pokemon-1.mp3"></audio>
+               <span class="poke-name">Bulbasaur</span>
+               <audio class="poke-audio" src="audios/pokemon-1.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-2"></div>
-               <p class="poke-name">Ivysaur</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-2.mp3"></audio>
+               <span class="poke-name">Ivysaur</span>
+               <audio class="poke-audio" src="audios/pokemon-2.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-3"></div>
-               <p class="poke-name">Venasaur</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-3.mp3"></audio>
+               <span class="poke-name">Venasaur</span>
+               <audio class="poke-audio" src="audios/pokemon-3.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-4"></div>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-4.mp3"></audio>
-               <p class="poke-name">Squirtle</p>
+               <span class="poke-name">Squirtle</span>
+               <audio class="poke-audio" src="audios/pokemon-4.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-5"></div>
-               <p class="poke-name">Wartortle</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-5.mp3"></audio>
+               <span class="poke-name">Wartortle</span>
+               <audio class="poke-audio" src="audios/pokemon-5.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-6"></div>
-               <p class="poke-name">Blastoise</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-6.mp3"></audio>
+               <span class="poke-name">Blastoise</span>
+               <audio class="poke-audio" src="audios/pokemon-6.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-7"></div>
-               <p class="poke-name">Charmander</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-7.mp3"></audio>
+               <span class="poke-name">Charmander</span>
+               <audio class="poke-audio" src="audios/pokemon-7.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-8"></div>
-               <p class="poke-name">Charmeleon</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-8.mp3"></audio>
+               <span class="poke-name">Charmeleon</span>
+               <audio class="poke-audio" src="audios/pokemon-8.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-9"></div>
-               <p class="poke-name">Charizard</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-9.mp3"></audio>
+               <span class="poke-name">Charizard</span>
+               <audio class="poke-audio" src="audios/pokemon-9.mp3"></audio>
             </div>
-         </div>
+         </section>
 
-         <div class="column">
+         <section class="column">
             <div class="pokemon-content">
                <div class="poke-img poke-img-10"></div>
-               <p class="poke-name">Pidgey</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-10.mp3"></audio>
+               <span class="poke-name">Pidgey</span>
+               <audio class="poke-audio" src="audios/pokemon-10.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-11"></div>
-               <p class="poke-name">Pidgeotto</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-11.mp3"></audio>
+               <span class="poke-name">Pidgeotto</span>
+               <audio class="poke-audio" src="audios/pokemon-11.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-12"></div>
-               <p class="poke-name">Pidgeot</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-12.mp3"></audio>
+               <span class="poke-name">Pidgeot</span>
+               <audio class="poke-audio" src="audios/pokemon-12.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-13"></div>
-               <p class="poke-name">Pichu</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-13.mp3"></audio>
+               <span class="poke-name">Pichu</span>
+               <audio class="poke-audio" src="audios/pokemon-13.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-14"></div>
-               <p class="poke-name">Pikachu</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-14.mp3"></audio>
+               <span class="poke-name">Pikachu</span>
+               <audio class="poke-audio" src="audios/pokemon-14.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-15"></div>
-               <p class="poke-name">Raichu</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-15.mp3"></audio>
+               <span class="poke-name">Raichu</span>
+               <audio class="poke-audio" src="audios/pokemon-15.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-16"></div>
-               <p class="poke-name">Caterpie</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-16.mp3"></audio>
+               <span class="poke-name">Caterpie</span>
+               <audio class="poke-audio" src="audios/pokemon-16.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-17"></div>
-               <p class="poke-name">Metapod</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-17.mp3"></audio>
+               <span class="poke-name">Metapod</span>
+               <audio class="poke-audio" src="audios/pokemon-17.mp3"></audio>
             </div>
             <div class="pokemon-content">
                <div class="poke-img poke-img-18"></div>
-               <p class="poke-name">Butterfree</p>
-               <audio controls="true" class="poke-audio" src="audios/pokemon-18.mp3"></audio>
+               <span class="poke-name">Butterfree</span>
+               <audio class="poke-audio" src="audios/pokemon-18.mp3"></audio>
             </div>
-         </div>
+         </section>
          <p class="pokemons-page-info">Click the pokemons to listen, double click to stop</p>
-      </div>
-   </div>
+      </section>
+   </main>
 
 
 
