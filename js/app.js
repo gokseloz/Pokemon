@@ -7,7 +7,7 @@ $(".banner-button").on("click", function () {
 //mouseover on pokemons and some styles add
 $(".poke-img").on("mouseover", function () {    
     $(this).css({                               //select only the element which is mouseovered, not select all the elements which has .poke-img class 
-        "filter": "blur(5px)",
+        "filter": "contrast(100%) blur(5px)",
         "animation": "pokeImg-anim 1s"
     })
     $(this).siblings(".poke-name").css("opacity", "1")  //select this' elements sibling which has class of "poke-name"
@@ -16,6 +16,7 @@ $(".poke-img").on("mouseout", function () {
     $(this).css({
         "filter": "blur(0px)",
         "animation": "none"
+        
     })
     $(this).siblings(".poke-name").css("opacity", "0")
 })
